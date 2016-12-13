@@ -42,14 +42,14 @@ module.exports = {
 		// 	}
 		// ],
 		loaders: [
-            {
-                test: /\.scss$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
-            },
-            {
-                test: /\.css/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader")
-            },
+            // {
+            //     test: /\.scss$/,
+            //     loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+            // },
+            // {
+            //     test: /\.css/,
+            //     loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+            // },
 			{
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
