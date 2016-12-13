@@ -1,0 +1,57 @@
+{
+  "name": "searchwidget",
+  "version": "0.0.1",
+  "description": "",
+  "main": "widget.js",
+  "scripts": {
+    "start": "cd dist && sudo php -S localhost:80",
+    "watch": "./node_modules/.bin/webpack --watch",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "search"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "preact": "^7.1.0",
+    "whatwg-fetch": "^2.0.1"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.5.0",
+    "autoprefixer": "^6.5.4",
+    "babel": "^6.5.2",
+    "babel-core": "^6.20.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.9",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2015-minimal": "^2.1.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.12.1",
+    "exports-loader": "^0.6.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
+    "imports-loader": "^0.7.0",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.0.0",
+    "offline-plugin": "^4.5.3",
+    "path": "^0.12.7",
+    "postcss-loader": "^1.2.1",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.2",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
