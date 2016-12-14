@@ -13,13 +13,6 @@ RequireJS was not the right technology and I was never satisfied with the result
 
 This is the way to go.
 
-Technologies
-------------
-
-1. preact
-1. ES2015
-1. webpack
-1. fetch polyfill (whatwg-fetch)
 
 How to run the widget
 ---------------------
@@ -34,12 +27,19 @@ A sample page can be found in `dist/index.html`.
 The widget should work out of the box in the browser.
 
 
+Technologies
+------------
+
+1. preact
+1. ES2015
+1. webpack
+1. fetch polyfill (whatwg-fetch)
 
 
 Dev
 ---
 
-1. npm install
-1. npm run watch
-1. open dist/index.html in browser
+`npm install`
+`npm run watch`
+open dist/index.html in browser
 

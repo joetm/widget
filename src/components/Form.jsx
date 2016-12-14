@@ -1,57 +1,45 @@
 import { h, Component } from 'preact';
 
-const styles = {
-    example: {
-        cursor: 'pointer'
-    }
-};
+import Example from "./Example.jsx";
 
-class Example extends Component {
-    render(props, state) {
-        return <span style={styles.example}>{props.name}</span>;
-    }
-};
 
 export default class Form extends Component {
 
-    constructor() {
-        super();
-        this.state = {
-            internal_only: false
-        };
-    }
-
-    changeInternalCheckbox() {
-        const newState = !this.state.internal_only;
-        this.setState({internal_only: newState});
-        this.props.changeURLparameter('internal_only', newState)
-    }
-
-    render(props, state) {
+    render() {
         return (
-            <form action={props.apiURL} method="GET">
-                <input id="normalSearchInput" type="search" />
-                <input type="button" value="Search" onClick={props.queryAPI} />
+            <form action={this.props.apiURL} method="GET">
+                <input id="normalSearchInput" value={this.props.searchterm} type="search" />
+                <input type="button" value="Search" onClick={this.props.queryAPI} />
                 <div>
                     <div>
                         <label>
-                            <input onClick={this.changeInternalCheckbox.bind(this)} type="checkbox" name='searchTerminology' value={this.state.internal_only} />
+                            <input
+                                onChange={this.props.changeInternalCheckbox}
+                                type="checkbox"
+                                name='searchTerminology'
+                                value={this.props.internal_only}
+                                checked={this.props.internal_only ? 'checked' : false}
+                            />
                             Include external terminologies
                         </label>
                     </div>
                     <div>
                         <label>
-                            <input type='checkbox' name='searchType' value='exact' checked />
+                            <input
+                                onChange={this.props.changeExactCheckbox}
+                                type='checkbox'
+                                name='searchType'
+                                value={this.props.exact}
+                                checked={this.props.exact === true ? 'checked' : false}
+                            />
                             Exact Search
                         </label>
                     </div>
                     <div>
-                        Examples: <Example name={"bacteria"} />, <Example name={"polydesmus"} />, <Example name={"soil"} />
+                        Examples: <Example useExample={this.props.useExample} name={"bacteria"} />, <Example useExample={this.props.useExample} name={"polydesmus"} />, <Example useExample={this.props.useExample} name={"soil"} />
                     </div>
                 </div>
             </form>
         );
     }
-}
-
-
+};

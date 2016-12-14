@@ -3,11 +3,12 @@ import { h, Component } from 'preact';
 export default class Result extends Component {
     render(props, state) {
         return (
-            <div class="result">
-                {props.title}
-                {props.URI}
-                {props.taxonomy}
-            </div>
+            <tr class="result">
+                <td>{props.label}</td>
+                <td>{props.description}</td>
+                <td>{props.uri}</td>
+                <td>{props.sourceTerminology}</td>
+            </tr>
         );
     }
 }
